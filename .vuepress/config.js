@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "吴之全的博客",
+  "title": "Quan的博客",
   "description": "分享学习技术知识",
   "dest": "public",
   "head": [
@@ -27,39 +27,55 @@ module.exports = {
   "themeConfig": {
     "nav": [
       {
-        "text": "Home",
+        "text": "首页",
         "link": "/",
         "icon": "reco-home"
       },
       {
-        "text": "TimeLine",
+        "text": "时间轴",
         "link": "/timeline/",
         "icon": "reco-date"
       },
       {
-        "text": "Docs",
+        "text": "我的收藏",
         "icon": "reco-message",
-        "items": [
-          {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
-        ]
+        "link": "/mine/collect/"
+        // "items": [
+        //   {
+        //     "text": "vuepress-reco",
+        //     "link": "/mine/collect/"
+        //   }
+        // ]
       },
       {
-        "text": "Contact",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "GitHub",
-            "link": "https://github.com/recoluan",
-            "icon": "reco-github"
-          }
-        ]
+        "text": "GitHub",
+        "link": "https://github.com/wuzhiquan",
+        "icon": "reco-github"
       }
     ],
     "sidebar": {
-      "/docs/theme-reco/": [
+      "/blogs/category1/": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "2018",
+        "2019",
+      ],
+      "/blogs/category2/": [
+        "",
+        "2016",
+        "2017",
+      ],
+      "/blogs/other/": [
+        "guide",
+      ],
+      "/mine/collect/": [
         "",
         "theme",
         "plugin",
@@ -78,30 +94,55 @@ module.exports = {
         "text": "Tag"
       }
     },
-    "friendLink": [
-      {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
-      },
-      {
-        "title": "vuepress-theme-reco",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
-      }
-    ],
-    "logo": "/logo.png",
+    // "friendLink": [
+    //   {
+    //     "title": "午后南杂",
+    //     "desc": "Enjoy when you can, and endure when you must.",
+    //     "email": "1156743527@qq.com",
+    //     "link": "https://www.recoluan.com"
+    //   },
+    //   {
+    //     "title": "vuepress-theme-reco",
+    //     "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+    //     "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+    //     "link": "https://vuepress-theme-reco.recoluan.com"
+    //   }
+    // ],
+    // "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",
-    "author": "吴之全",
-    "authorAvatar": "/avatar.png",
-    "record": "xxxx",
-    "startYear": "2017"
+    "author": "Quan",
+    "authorAvatar": "/logo.png",
+    "record": "粤ICP备18059339号",
+    // "startYear": "2017"
   },
   "markdown": {
     "lineNumbers": true
-  }
+  },
+  plugins: [
+    // 更新刷新插件
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: {
+        message: "发现新内容可用",
+        buttonText: "刷新"
+      }
+    }],
+    // 代码复制弹窗插件
+    ["vuepress-plugin-nuggets-style-copy", {
+      copyText: "copy",
+      tip: {
+          content: "复制成功!"
+      }
+    }],
+    ['@vuepress-reco/vuepress-plugin-pagation', {}],
+    ['@vuepress-reco/vuepress-plugin-comments', {
+      solution: 'valine',
+      options: {
+        appId: '0RTn4qGAmFlOkqCisEr842wn-gzGzoHsz',// your appId
+        appKey: 'UP22iQv27sLQuF4qa4V68K38', // your appKey
+      }
+    }],
+  ]
 }
