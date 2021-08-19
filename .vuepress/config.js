@@ -54,26 +54,29 @@ module.exports = {
       }
     ],
     "sidebar": {
-      "/blogs/category1/": [
+      "/blogs/Vue/": [
         "",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "2018",
-        "2019",
       ],
-      "/blogs/category2/": [
+      "/blogs/TypeScript/": [
         "",
-        "2016",
-        "2017",
       ],
-      "/blogs/other/": [
-        "guide",
+      "/blogs/ES6+/": [
+        "",
+      ],
+      "/blogs/React/": [
+        "",
+      ],
+      "/blogs/NodeJS/": [
+        "",
+      ],
+      "/blogs/前端工程化/": [
+        "",
+      ],
+      "/blogs/面试相关/": [
+        "",
+      ],
+      "/blogs/常用工具/": [
+        "",
       ],
       "/mine/collect/": [
         "",
@@ -115,6 +118,7 @@ module.exports = {
     "author": "Quan",
     "authorAvatar": "/logo.png",
     "record": "粤ICP备18059339号",
+    "recordLink": "https://beian.miit.gov.cn/",
     // "startYear": "2017"
   },
   "markdown": {
