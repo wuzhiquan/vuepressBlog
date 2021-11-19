@@ -56,6 +56,8 @@ module.exports = {
     "sidebar": {
       "/blogs/Vue/": [
         "",
+        "1",
+        "2",
       ],
       "/blogs/TypeScript/": [
         "",
@@ -63,17 +65,14 @@ module.exports = {
       "/blogs/ES6+/": [
         "",
       ],
-      "/blogs/React/": [
-        "",
-      ],
-      "/blogs/NodeJS/": [
-        "",
-      ],
       "/blogs/前端工程化/": [
         "",
+        "1",
       ],
       "/blogs/面试相关/": [
         "",
+        "1",
+        "2",
       ],
       "/blogs/常用工具/": [
         "",
